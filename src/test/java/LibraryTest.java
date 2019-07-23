@@ -50,4 +50,12 @@ public class LibraryTest {
         library.addBook(book);
         assertEquals(false, library.availableCapacity());
     }
+
+    @Test
+    public void canLoanOutBook() {
+        library.addBook(book);
+        library.addBook(book);
+        library.loanBook();
+        assertEquals(1, library.getNumberOfBooks());
+    }
 }

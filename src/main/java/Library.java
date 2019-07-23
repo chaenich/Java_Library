@@ -19,6 +19,10 @@ public class Library {
         }
     }
 
+    public Book loanBook() {
+        return this.books.remove(0);
+    }
+
     public boolean availableCapacity() {
         if (getNumberOfBooks() < this.capacity) {
             return true;
